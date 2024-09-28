@@ -1,0 +1,125 @@
+h1 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 76px;
+    letter-spacing: 8px;
+    margin: 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+h2 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 36px;
+    margin: 0;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+p {
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    margin: 0;
+    word-wrap: normal;
+    white-space: normal;
+}
+
+.subtitle {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+}
+
+.numeric {
+    font-family: "Mulish", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    margin: 0;
+    width: 96px;
+}
+
+.subtitle-link {
+    font-size: 16px;
+    margin: 0;
+    color: #97A1A7;
+}
+
+a {
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #1E2022;
+    text-decoration: none;
+    margin: 0;
+}
+
+a:hover, .subtitle-link:hover{
+    color: rgba(249, 89, 89, 1);
+}
+
+a:active, .subtitle-link:active {
+    color: rgba(249, 89, 89, 1);
+    transform: scale(0.95);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 22px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .subtitle-link {
+        font-size: 16px;
+    }
+    .numeric {
+        font-family: "Mulish", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 36px;
+        margin: 0;
+        width: 72px;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .subtitle-link {
+        font-size: 14px;
+    }
+    .numeric {
+        font-family: "Mulish", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 28px;
+        margin: 0;
+        width: 56px;
+    }
+}

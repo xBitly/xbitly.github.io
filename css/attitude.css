@@ -1,0 +1,122 @@
+#attitude {
+    width: calc(100vw - 24px - 24px);
+    padding: 96px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#attitude-description-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+#attitude-top-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+#attitude-medium-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 48px 0 24px 0;
+}
+
+#attitude-description-text-div {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#attitude-description-image-div {
+    width: 50%;
+}
+
+.attitude-element-div {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 0;
+    gap: 96px;
+    border-bottom: 3px solid #1E2022;
+    align-items: center;
+}
+
+.attitude-element-div:first-child {
+    border-top: 3px solid #1E2022;
+}
+
+#time-line {
+    width: 100%;
+    height: 48px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA5OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIgMFYyNE0yIDQ4VjI0TTIgMjRIOTgiIHN0cm9rZT0iI0Y5NTk1OSIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjwvc3ZnPgo=') repeat-x;
+    background-size: 98px 48px;
+    animation: timeMove 2.5s linear infinite reverse;
+    margin-top: 8px;
+}
+
+@keyframes timeMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 98px 0;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #attitude {
+        width: calc(100vw - 18px - 18px);
+        padding: 72px 18px 18px 18px;
+        gap: 0;
+    }
+
+    #attitude-medium-div {
+        padding: 36px 0 18px 0;
+    }
+
+    .attitude-element-div {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 24px;
+        border-bottom: 2px solid #1E2022;
+        align-items: start;
+    }
+
+    .attitude-element-div:first-child {
+        border-top: 2px solid #1E2022;
+    }
+}
+
+@media (max-width: 767px) {
+    #attitude-description-div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 18px;
+    }
+
+    #attitude-description-text-div {
+        width: 100%;
+        display: inline-block;
+        flex-direction: column;
+    }
+
+    #attitude-description-image-div {
+        width: 100%;
+    }
+
+    .attitude-element-div {
+        gap: 18px;
+    }
+}

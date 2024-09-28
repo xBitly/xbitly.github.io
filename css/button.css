@@ -1,0 +1,88 @@
+.button {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 1);
+    padding: 12px 24px;
+    border-radius: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: fit-content;
+}
+
+.button:hover {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 0.75);
+}
+
+.button:active {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 1);
+    transform: scale(0.95);
+}
+
+.send-button {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 1);
+    padding: 16px 32px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    margin-top: 12px;
+}
+
+.send-button:focus {
+    outline: none;
+    border: none;
+}
+
+.send-button:hover {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 0.75);
+    outline: none;
+    border: none;
+}
+
+.send-button:active {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 1);
+    transform: scale(0.95);
+    outline: none;
+    border: none;
+}
+
+.big-button {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 1);
+    padding: 24px 36px;
+    border-radius: 48px;
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.big-button:hover {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 0.75);
+}
+
+.big-button:active {
+    color: #1E2022;
+    background: rgba(249, 89, 89, 1);
+    transform: scale(0.95);
+}
