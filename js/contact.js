@@ -9,7 +9,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         data[key] = value;
     });
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyM-zMKUReSlNkHLeaDMQGBDb7KDz43F9HhhBD9tFNxOdhwQOB6UtSacIWq2oKbcL88/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZNkzd2PIRYdVTDB3HOgMsa-9VKmgqilZiXnNMsgd55NocLilkuoZU9f0zYUdGWeK3/exec';
 
     fetch(scriptURL, {
         method: 'POST',
