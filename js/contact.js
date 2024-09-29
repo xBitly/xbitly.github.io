@@ -28,5 +28,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
             messageBox.classList.remove('show');
             messageBox.classList.add('hidden');
         }, 3000);
+
+        document.getElementById('contact-form').reset();
     }
 });
