@@ -276,28 +276,28 @@
                 <label>
                     <select name="help" required>
                         <option value="" disabled selected>С чем нужно помочь?</option>
-                        <option value="business">Бизнес-исследование</option>
-                        <option value="prototype">Разработка прототика</option>
-                        <option value="mvp">Разработка MVP</option>
-                        <option value="support">Техподдержка</option>
+                        <option value="Бизнес-исследование">Бизнес-исследование</option>
+                        <option value="Разработка прототика">Разработка прототика</option>
+                        <option value="Разработка MVP">Разработка MVP</option>
+                        <option value="Техподдержка">Техподдержка</option>
                     </select>
                 </label>
 
                 <label>
                     <select name="deadline" required>
                         <option value="" disabled selected>Какие сроки?</option>
-                        <option value="1_month">< 1 месяца</option>
-                        <option value="2_months">1 – 3 месяца</option>
-                        <option value="3_months">> 3 месяцев</option>
+                        <option value="< 1 месяца">< 1 месяца</option>
+                        <option value="1 – 3 месяца">1 – 3 месяца</option>
+                        <option value="> 3 месяцев">> 3 месяцев</option>
                     </select>
                 </label>
 
                 <label>
                     <select name="budget" required>
                         <option value="" disabled selected>Какой бюджет?</option>
-                        <option value="small">< 250 тыс.</option>
-                        <option value="medium">250 тыс. – 1 млн.</option>
-                        <option value="large">> 1 млн.</option>
+                        <option value="< 250 тыс. ₽">< 250 тыс. ₽</option>
+                        <option value="250 тыс. – 1 млн. ₽">250 тыс. – 1 млн. ₽</option>
+                        <option value="> 1 млн. ₽">> 1 млн. ₽</option>
                     </select>
                 </label>
 
@@ -317,19 +317,19 @@
                 <div id="radio-group">
                     <p style="color: #C9D6DF; margin-top: 8px;">Как с вами связаться?</p>
                     <label class="custom-radio">
-                        <input type="radio" name="contact" value="phone" required>
+                        <input type="radio" name="contact" value="Позвонить по телефону" required>
                         <span class="custom-radio-box"></span>
                         Позвонить по телефону
                     </label>
 
                     <label class="custom-radio">
-                        <input type="radio" name="contact" value="email" required>
+                        <input type="radio" name="contact" value="Написать на почту" required>
                         <span class="custom-radio-box"></span>
                         Написать на почту
                     </label>
 
                     <label class="custom-radio">
-                        <input type="radio" name="contact" value="telegram" required>
+                        <input type="radio" name="contact" value="Написать в Telegram" required>
                         <span class="custom-radio-box"></span>
                         Написать в Telegram
                     </label>
@@ -341,6 +341,9 @@
                 </button>
             </form>
         </div>
+    </div>
+    <div id="success-message" class="hidden">
+        <p>Заявка успешно отправлена</p>
     </div>
 </section>
 

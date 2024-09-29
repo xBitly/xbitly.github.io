@@ -112,6 +112,8 @@ input[type="text"], input[type="tel"], input[type="email"] {
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     background-color: rgba(0, 0, 0, 0);
     box-sizing: border-box;
     transition: border-color 0.3s, background-color 0.3s;
@@ -175,6 +177,30 @@ option {
     font-size: 24px;
 }
 
+#success-message {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5FEF3F;
+    color: #1E2022;
+    padding: 24px;
+    border-radius: 24px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+#success-message.show {
+    bottom: 24px;
+    opacity: 1;
+}
+
+#success-message.hidden {
+    bottom: -100px;
+    opacity: 0;
+}
+
+
 @media (max-width: 1024px) {
     #contact {
         width: calc(100vw - 18px - 18px);
@@ -231,6 +257,12 @@ option {
 
     option {
         font-size: 22px;
+    }
+
+    #success-message {
+        padding: 22px;
+        border-radius: 22px;
+        width: 80%;
     }
 }
 
@@ -302,5 +334,10 @@ option {
 
     option {
         font-size: 18px;
+    }
+
+    #success-message {
+        padding: 18px;
+        border-radius: 18px;
     }
 }
