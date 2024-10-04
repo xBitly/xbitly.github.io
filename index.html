@@ -10,33 +10,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/text.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/main/button.css">
+    <link rel="stylesheet" href="css/main/text.css">
+    <link rel="stylesheet" href="css/index/header.css">
+    <link rel="stylesheet" href="css/index/footer.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/attitude.css">
-    <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/index/main.css">
+    <link rel="stylesheet" href="css/index/about.css">
+    <link rel="stylesheet" href="css/index/projects.css">
+    <link rel="stylesheet" href="css/index/attitude.css">
+    <link rel="stylesheet" href="css/index/services.css">
+    <link rel="stylesheet" href="css/index/team.css">
+    <link rel="stylesheet" href="css/index/contact.css">
 </head>
 <body>
 <header>
-    <img id="logo" src="files/logo.svg" alt="logo"/>
+    <img id="logo" src="files/branding/logo.svg" alt="Логотип Quark Studio"/>
 
-    <img id="hamburger" src="files/hamburger.svg" alt="menu"/>
+    <img id="hamburger" src="files/icons/hamburger.svg" alt="Иконка меню"/>
 
     <div id="navigation-items-div">
         <a href="#about">О нас</a>
         <a href="#projects">Проекты</a>
+        <a href="#attitude">Наш подход</a>
         <a href="#services">Услуги</a>
         <a href="#team">Команда</a>
-        <a href="#contact">Контакты</a>
+        <a href="/blog">Блог</a>
         <a href="#contact" class="button">
             Обсудить проект
-            <img src="files/arrow.svg" alt="arrow"/>
+            <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
         </a>
     </div>
 
@@ -49,7 +52,7 @@
         <a></a>
         <a href="#contact" class="button">
             Обсудить проект
-            <img src="files/arrow.svg" alt="arrow"/>
+            <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
         </a>
     </div>
 </header>
@@ -70,7 +73,7 @@
         <div id="main-bottom-button-div">
             <a href="#contact" class="button">
                 Обсудить проект
-                <img src="files/arrow.svg" alt="arrow"/>
+                <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
             </a>
         </div>
         <div id="main-bottom-description-div">
@@ -97,13 +100,104 @@
             </div>
         </div>
         <div id="about-bottom-right-div">
-            <p class="subtitle">Мы разрабатывает IT-продукты любой сложности, создавая <i>поддерживаемое</i> и <i>масштабируемое</i> решение, используя только современные технологии</p>
+            <p class="subtitle">Мы разрабатываем IT-продукты любой сложности, создавая <i>поддерживаемое</i> и <i>масштабируемое</i> решение, используя только современные технологии</p>
         </div>
     </div>
 </section>
 
-<!--<section id="projects">-->
-<!--</section>-->
+<section id="projects">
+    <div id="projects-title-div">
+        <h1>ПРОЕКТЫ</h1>
+    </div>
+    <div id="projects-container">
+        <div class="projects-card" onclick="window.location.href='/projects/toco'">
+            <div class="projects-div">
+                <div class="projects-logo-div">
+                    <img src="files/images/logo-toco.png" alt="Логотип ToCo" class="projects-logo">
+                    <h2>ToCo<br><a href="https://allsee.team"><p>x AllSee</p></a></h2>
+                </div>
+                <p>Приложение для микрообучения на базе искусственного интеллекта</p>
+            </div>
+            <div class="projects-tags-div">
+                <div class="projects-tag">
+                    <p class="subtitle">Backend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Mobile</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Design</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-card" onclick="window.location.href='/projects/yds'">
+            <div class="projects-div">
+                <div class="projects-logo-div">
+                    <img src="files/images/logo-yds.png" alt="Логотип Твоя автошкола" class="projects-logo">
+                    <h2>Твоя автошкола<br><a href="https://allsee.team"><p>x AllSee</p></a></h2>
+                </div>
+                <p>Платформа для создания официального мобильного приложения автошколы</p>
+            </div>
+            <div class="projects-tags-div">
+                <div class="projects-tag">
+                    <p class="subtitle">Backend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Frontend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Mobile</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-card" onclick="window.location.href='/projects/nolimy'">
+            <div class="projects-div">
+                <div class="projects-logo-div">
+                    <img src="files/images/logo-nolimy.png" alt="Логотип Nolimy" class="projects-logo">
+                    <h2>Nolimy</h2>
+                </div>
+                <p>Стартап-платформа — умные визитки с системой аналитики</p>
+            </div>
+            <div class="projects-tags-div">
+                <div class="projects-tag">
+                    <p class="subtitle">Startup</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Backend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Frontend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Design</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-card" onclick="window.location.href='/projects/beetlink'">
+            <div class="projects-div">
+                <div class="projects-logo-div">
+                    <img src="files/images/logo-beetlink.png" alt="Логотип beetlink" class="projects-logo">
+                    <h2>beetlink</h2>
+                </div>
+                <p>Платформа для аналитики и таргета трафика</p>
+            </div>
+            <div class="projects-tags-div">
+                <div class="projects-tag">
+                    <p class="subtitle">Backend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Frontend</p>
+                </div>
+                <div class="projects-tag">
+                    <p class="subtitle">Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="attitude">
     <div id="attitude-top-div">
@@ -164,7 +258,7 @@
                         <p>Погрузимся в проект, проведем анализ целевой аудитории, рынка и конкурентов и подберем подходящую стратегию</p>
                     </div>
                 </div>
-                <img class="services-element-image" src="files/img1.png"  alt="">
+                <img class="services-element-image" src="files/images/img-1.png" alt="Абстрактное изображение бизнес-исследования">
             </div>
             <div class="services-element-bottom-div">
                 <div class="services-element-bottom-left-div">
@@ -173,7 +267,7 @@
                 <div class="services-element-bottom-right-div">
                     <a href="#contact" class="button">
                         Обсудить проект
-                        <img src="files/arrow.svg" alt="arrow"/>
+                        <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
                     </a>
                 </div>
             </div>
@@ -186,7 +280,7 @@
                         <p>Проанализируем путь пользователя, разработаем прототип интерфейса и подготовим к демонстрации</p>
                     </div>
                 </div>
-                <img class="services-element-image" src="files/img2.png"  alt="">
+                <img class="services-element-image" src="files/images/img-2.png" alt="Абстрактное изображение разработки прототипа">
             </div>
             <div class="services-element-bottom-div">
                 <div class="services-element-bottom-left-div">
@@ -195,7 +289,7 @@
                 <div class="services-element-bottom-right-div">
                     <a href="#contact" class="button">
                         Обсудить проект
-                        <img src="files/arrow.svg" alt="arrow"/>
+                        <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
                     </a>
                 </div>
             </div>
@@ -208,7 +302,7 @@
                         <p>Разработаем минимальный жизнеспособный продукт, подготовим документацию и дизайн-систему</p>
                     </div>
                 </div>
-                <img class="services-element-image" src="files/img3.png"  alt="">
+                <img class="services-element-image" src="files/images/img-3.png" alt="Абстрактное изображение разработки MVP">
             </div>
             <div class="services-element-bottom-div">
                 <div class="services-element-bottom-left-div">
@@ -217,7 +311,7 @@
                 <div class="services-element-bottom-right-div">
                     <a href="#contact" class="button">
                         Обсудить проект
-                        <img src="files/arrow.svg" alt="arrow"/>
+                        <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
                     </a>
                 </div>
             </div>
@@ -230,7 +324,7 @@
                         <p>Продолжим развивать разработанный нами MVP или поможем найти и обучить in-house команду</p>
                     </div>
                 </div>
-                <img class="services-element-image" src="files/img4.png"  alt="">
+                <img class="services-element-image" src="files/images/img-4.png" alt="Абстрактное изображение техподдержки">
             </div>
             <div class="services-element-bottom-div">
                 <div class="services-element-bottom-left-div">
@@ -239,7 +333,7 @@
                 <div class="services-element-bottom-right-div">
                     <a href="#contact" class="button">
                         Обсудить проект
-                        <img src="files/arrow.svg" alt="arrow"/>
+                        <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
                     </a>
                 </div>
             </div>
@@ -247,8 +341,38 @@
     </div>
 </section>
 
-<!--<section id="team">-->
-<!--</section>-->
+<section id="team">
+    <div id="team-title-div">
+        <h1>КОМАНДА</h1>
+    </div>
+    <div id="team-info-div">
+        <div class="team-info-input-div">
+            <img id="main-photo" src="files/images/team-1.png" alt="Фото Андрея Авдеева, основателя студии">
+        </div>
+        <div class="team-info-input-div">
+            <div id="team-info-input-main-div">
+                <p>CEO</p>
+                <h2>Авдеев Андрей</h2>
+            </div>
+            <a href="#contact" class="button">
+                Обсудить проект
+                <img src="files/icons/arrow.svg" alt="Иконка стрелки"/>
+            </a>
+        </div>
+        <div class="team-info-input-div">
+            <h2>В нашей команде <i>10+</i> специалистов</h2>
+            <div id="team-info-grid-div">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+                <img class="team-photo" src="files/images/team-more.png" alt="Иконка И ДАЛЕЕ">
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="contact">
     <div id="contact-title-div">
@@ -257,7 +381,7 @@
     <div id="contact-info-div">
         <div id="contact-info-left-div">
             <div id="contact-info-left-top-div">
-                <h2>Создадим магию вместе?</h2>
+                <h2>Создадим продукт вместе?</h2>
                 <p>Оставляйте заявку, мы свяжемся с вами в течение 24 часов и бесплатно проконсультируем</p>
             </div>
             <div id="contact-info-left-bottom-div">
@@ -277,7 +401,7 @@
                     <select name="help" required>
                         <option value="" disabled selected>С чем нужно помочь?</option>
                         <option value="Бизнес-исследование">Бизнес-исследование</option>
-                        <option value="Разработка прототика">Разработка прототика</option>
+                        <option value="Разработка прототипа">Разработка прототипа</option>
                         <option value="Разработка MVP">Разработка MVP</option>
                         <option value="Техподдержка">Техподдержка</option>
                     </select>
@@ -337,7 +461,7 @@
 
                 <button type="submit" class="send-button">
                     Отправить
-                    <img src="files/send.svg" alt="send"/>
+                    <img src="files/icons/send.svg" alt="Иконка отправки"/>
                 </button>
             </form>
         </div>
@@ -350,16 +474,20 @@
 <footer>
     <div id="footer-description-div">
         <p class="subtitle">Quark Studio <i>2024</i>. Все права защищены.</p>
+        <p class="subtitle">Авдеев Андрей Дмитриевич</p>
     </div>
     <div id="footer-private-police-div">
-        <a href="#">
+        <a href="/blog">
+            <p class="subtitle-link">Блог</p>
+        </a>
+        <a href="/police">
             <p class="subtitle-link">Политика обработки персональных данных</p>
         </a>
     </div>
 </footer>
-<script src="js/header.js"></script>
-<script src="js/main.js"></script>
-<script src="js/about.js"></script>
-<script src="js/contact.js"></script>
+<script src="js/index/header.js"></script>
+<script src="js/index/main.js"></script>
+<script src="js/index/about.js"></script>
+<script src="js/index/contact.js"></script>
 </body>
 </html>

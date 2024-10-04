@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(151, 161, 167, 0.25);
+}
+
+#footer-description-div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+}
+
+#footer-private-police-div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+}
+
+@media (max-width: 1024px) {
+    footer {
+        flex-direction: column;
+        padding: 18px;
+        align-items: start;
+        gap: 6px;
+    }
+
+    #footer-description-div {
+        gap: 6px;
+    }
+
+    #footer-private-police-div {
+        flex-direction: column-reverse;
+        gap: 6px;
+        align-items: start;
+    }
+}
