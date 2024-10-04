@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background: #C9D6DF;
+    color: #1E2022;
+    align-content: center;
+}
+
+#main {
+    padding: 24px;
+}
