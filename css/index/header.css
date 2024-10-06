@@ -21,8 +21,8 @@ header.scrolled {
 }
 
 #logo {
-    height: 24px;
-    width: 24px;
+    height: 32px;
+    width: 32px;
 }
 
 #navigation-items-div {
@@ -66,6 +66,11 @@ header.scrolled {
     header {
         height: 54px;
         padding: 0 18px;
+    }
+
+    #logo {
+        height: 24px;
+        width: 24px;
     }
 
     #navigation-items-div {
