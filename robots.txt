@@ -1,3 +1,8 @@
 User-agent: *
-Disallow: /
+Disallow: /404
+Disallow: /privacy/simple-notes
+Disallow: /privacy/quark-studio
+Allow: /
+Allow: /blog
+
 Sitemap: https://qstudio.tech/sitemap.xml
