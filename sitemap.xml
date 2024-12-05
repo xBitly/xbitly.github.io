@@ -1,12 +1,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://qstudio.tech/</loc>
-        <lastmod>2024-12-04</lastmod>
+        <lastmod>2024-12-05</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://qstudio.tech/blog</loc>
-        <lastmod>2024-12-01</lastmod>
+        <lastmod>2024-12-05</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>
