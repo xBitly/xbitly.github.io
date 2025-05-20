@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Страница не найдена</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/main/button.css">
+    <link rel="stylesheet" href="../css/main/text.css">
+    <link rel="stylesheet" href="../css/vpn/vpn.css">
+</head>
+<body>
+<div id="main">
+    <h2>Вставьте код активации</h2>
+    <br>
+    <input type="text" name="name" placeholder="Как к вам обращаться?" required>
+    <br>
+    <br>
+    <p class="subtitle red"></p>
+</div>
+<script>
+    const input = document.querySelector('input[name="name"]');
+    const message = document.querySelector('.subtitle.red');
+
+    let timeout = null;
+
+    input.addEventListener('input', () => {
+        clearTimeout(timeout);
+
+        const code = input.value.trim();
+        if (!code) {
+            message.textContent = '';
+            return;
+        }
+
+        timeout = setTimeout(() => {
+            fetch(`https://beetlink.ru/vpn/download/${encodeURIComponent(code)}`)
+                .then(response => {
+                    if (response.status === 404) {
+                        return response.text().then(text => {
+                            message.textContent = text;
+                        });
+                    } else {
+                        message.textContent = '';
+                    }
+                })
+                .catch(error => {
+                    message.textContent = 'Ошибка запроса';
+                    console.error(error);
+                });
+        }, 300);
+    });
+</script>
+</body>

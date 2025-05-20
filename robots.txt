@@ -3,5 +3,6 @@ Allow: /
 Disallow: /404
 Disallow: /privacy/*
 Disallow: /files/*
+Disallow: /vpn/*
 
 Sitemap: https://qstudio.tech/sitemap.xml
