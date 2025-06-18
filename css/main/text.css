@@ -30,7 +30,20 @@ p {
     white-space: normal;
 }
 
+.plink {
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
 .subtitle {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+}
+
+.subtitle-a {
     display: inline-block;
     font-size: 16px;
     margin: 0;
@@ -81,6 +94,9 @@ a:active, .subtitle-link:active {
     p {
         font-size: 22px;
     }
+    .plink {
+        font-size: 22px;
+    }
     .subtitle {
         font-size: 16px;
     }
@@ -106,6 +122,9 @@ a:active, .subtitle-link:active {
         font-size: 24px;
     }
     p {
+        font-size: 18px;
+    }
+    .plink {
         font-size: 18px;
     }
     .subtitle {
