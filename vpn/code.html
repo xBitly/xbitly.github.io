@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Активация кода</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/main/button.css">
+    <link rel="stylesheet" href="../css/main/text.css">
+    <link rel="stylesheet" href="../css/vpn/vpn.css">
+</head>
+<body>
+<div id="main">
+    <img id="logo" src="../files/branding/logo.svg" alt="Логотип Quark Studio"/>
+    <br>
+    <br>
+    <br>
+    <p>1 шаг</p>
+    <h2>Получите сертификат</h2>
+    <p><br>Вставьте код активации и скачайте файл конфигурации <i>.ovpn</i>. Этот файл нужен для подключения.</p>
+    <br>
+    <input type="text" name="name" placeholder="Код" required>
+    <br>
+    <a href="../privacy/qstore-vpn.html">Вставляя код активации, вы принимаете условия использования</a>
+    <br>
+    <p class="subtitle red"></p>
+    <div class="line"></div>
+    <p>2 шаг</p>
+    <h2>Установите OpenVPN Connect</h2>
+    <p><br>Перейдите на <a class="plink" href="https://openvpn.net/client/" target="_blank">официальный сайт OpenVPN</a> и выберите подходящую версию для вашей платформы.<br><br>Если официальный сайт не открывается, можно воспользоваться ссылками ниже:</p>
+    <ul>
+        <li><a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn" target="_blank">Скачать для Android</a></li>
+        <li><a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981?mt=8" target="_blank">Скачать для iOS</a></li>
+        <li><a href="https://beetlink.ru/storage/download/openvpn-connect-3.7.2.4253_signed.msi" target="_blank">Скачать для Windows</a></li>
+        <li><a href="https://beetlink.ru/storage/download/openvpn-connect-3.7.1.5558_signed.dmg" target="_blank">Скачать для MacOS</a></li>
+    </ul>
+    <div class="line"></div>
+    <p>3 шаг</p>
+    <h2>Установите сертификат и подключитесь</h2>
+    <p><br>На смартфонах:<br></p>
+    <ul>
+        <li><p class="subtitle-a">Откройте приложение «Файлы» (или «Мои файлы»).</p></li>
+        <li><p class="subtitle-a">Найдите скачанный <i>.ovpn</i> файл.</p></li>
+        <li><p class="subtitle-a">Нажмите «Поделиться» и выберите OpenVPN Connect.</p></li>
+        <li><p class="subtitle-a">В приложении нажмите «Добавить», затем «Подключиться».</p></li>
+    </ul>
+    <p><br>На компьютере:<br></p>
+    <ul>
+        <li><p class="subtitle-a">Откройте установленное приложение OpenVPN Connect.</p></li>
+        <li><p class="subtitle-a">Перетащите <i>.ovpn</i> файл в окно программы.</p></li>
+        <li><p class="subtitle-a">Подтвердите импорт и нажмите «Подключиться».</p></li>
+    </ul>
+</div>
+<script>
+    const input = document.querySelector('input[name="name"]');
+    const message = document.querySelector('.subtitle.red');
+    let timeout;
+
+    input.addEventListener('input', () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            const code = input.value.trim();
+            if (!code) return;
+
+            fetch(`https://beetlink.ru/vpn/download/${code}`)
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(text => { throw new Error(text) });
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `${code}.ovpn`;
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    window.URL.revokeObjectURL(url);
+                    message.textContent = '';  // Очистим сообщение об ошибке
+                })
+                .catch(err => {
+                    message.textContent = err.message;
+                });
+        }, 300);
+    });
+</script>
+</body>
